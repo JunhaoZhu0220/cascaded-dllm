@@ -1,0 +1,10 @@
+defaults:
+  - stage@_global_: stage1
+  - model: small_shuffle      
+  - _self_  
+
+# Pretrained model configuration
+pretrained:
+  use_pretrained: false  # Whether to load pretrained weights
+  model_path: "louaaron/sedd-small"  # Path to pretrained model
+
