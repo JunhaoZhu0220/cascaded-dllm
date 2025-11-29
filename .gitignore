@@ -1,0 +1,22 @@
+.DS_Store
+**/__pycache__/
+*.slurm
+sbatch_log
+exp_local
+data
+cache
+sampling_outputs
+*.out
+data/
+exp_local/
+configs/config.yaml
+# *.txt
+trees
+stanford-corenlp-full-2018-02-27
+stanford-corenlp-full-2018-02-27.zip
+wandb/
+
+priority_perturbation_inspection.txt
+
+ds_cache/
+outputs/
