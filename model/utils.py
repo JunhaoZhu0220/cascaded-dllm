@@ -4,7 +4,6 @@ import torch.nn.functional as F
 
 
 def get_model_fn(model, train=False, return_mask=False):
-    # TBD: write a comment for the new arg return_mask
     """Create a function to give the output of the score-based model.
 
     Args:
