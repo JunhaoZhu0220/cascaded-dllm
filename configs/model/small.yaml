@@ -7,4 +7,3 @@ n_blocks: 12
 n_heads: 12
 scale_by_sigma: True
 dropout: 0.1
-prefix_shuffle: false  # Whether to shuffle prefix during training for robustness

@@ -2,7 +2,6 @@ defaults:
   - _self_
 
 work_dir: ${hydra:run.dir}
-# load_dir
 
 config_name: stage1_lr0.75e-4-32_64_128
 
@@ -67,11 +66,11 @@ optim:
 
 hydra:
   run:
-    dir: exp_local/${data.train}/${config_name}/${now:%Y.%m.%d}/${now:%H%M%S}
+    dir: exp_local/${data.train}/${data.dataloader}/${config_name}/${now:%Y.%m.%d}/${now:%H%M%S}
   sweep:
     dir: exp/${data.train}/${now:%Y.%m.%d}/${now:%H%M%S}
     subdir: ${hydra.job.num}
 
 wandb:
-  project: cascade-discrete-diffusion-keybert
+  project: cascade-dllm
   name: ${data.train}-${model.name}-${config_name}

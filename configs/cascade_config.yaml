@@ -1,7 +1,12 @@
 defaults:
   - stage@_global_: stage1
-  - model: small_shuffle      
+  - model: small
   - _self_  
+
+# Data preprocessor configuration
+# Options: 'constituency', 'keybert', 'keybert_no_stopword'
+data:
+  dataloader: keybert_no_stopword
 
 # Pretrained model configuration
 pretrained:

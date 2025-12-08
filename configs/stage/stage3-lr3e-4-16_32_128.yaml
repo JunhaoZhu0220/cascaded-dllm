@@ -10,9 +10,9 @@ ngpus: 2
 tokens: 50257
 baseline: false
 stage: 3
-load_dir: /scratch/jz5770/Discrete-Diffusion/exp_local/openwebtext/stage3-lr3e-4-16_32_128/2025.10.05/133144
-#stage1_root_dir: /scratch/jz5770/Discrete-Diffusion-Playground/exp_local/openwebtext/stage_1/2025.08.25/093627
-#stage2_root_dir: /scratch/jz5770/Discrete-Diffusion-Playground/exp_local/openwebtext/stage_2/2025.08.27/050351
+#load_dir:
+#stage1_root_dir:
+#stage2_root_dir:
 
 target_lens:
   stage1: 16
@@ -72,11 +72,11 @@ optim:
 
 hydra:
   run:
-    dir: exp_local/${data.train}/${config_name}/${now:%Y.%m.%d}/${now:%H%M%S}
+    dir: exp_local/${data.train}/${data.dataloader}/${config_name}/${now:%Y.%m.%d}/${now:%H%M%S}
   sweep:
     dir: exp/${data.train}/${now:%Y.%m.%d}/${now:%H%M%S}
     subdir: ${hydra.job.num}
 
 wandb:
-  project: cascade-discrete-diffusion-keybert
+  project: cascade-dllm
   name: ${data.train}-${model.name}-${config_name}

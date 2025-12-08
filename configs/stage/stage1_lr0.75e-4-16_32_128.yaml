@@ -67,11 +67,11 @@ optim:
 
 hydra:
   run:
-    dir: exp_local/${data.train}/${config_name}/${now:%Y.%m.%d}/${now:%H%M%S}
+    dir: exp_local/${data.train}/${data.dataloader}/${config_name}/${now:%Y.%m.%d}/${now:%H%M%S}
   sweep:
     dir: exp/${data.train}/${now:%Y.%m.%d}/${now:%H%M%S}
     subdir: ${hydra.job.num}
 
 wandb:
-  project: cascade-discrete-diffusion-keybert
+  project: cascade-dllm
   name: ${data.train}-${model.name}-${config_name}
