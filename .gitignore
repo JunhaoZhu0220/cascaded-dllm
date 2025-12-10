@@ -3,3 +3,4 @@ data
 sbatch_log
 exp_local
 __pycache__
+sampling_outputs/
